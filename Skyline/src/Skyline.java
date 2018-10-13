@@ -10,7 +10,7 @@ public class Skyline {
         ArrayList<Corner> finalMap = divide(buildingMap, 0, buildingMap.length-1);
         for (Corner c: finalMap
              ) {
-            System.out.print(+c.x+","+c.height+",");
+            System.out.print("(" + c.x+","+c.height+")");
         }
 
     }
@@ -24,9 +24,6 @@ public class Skyline {
 
     private static ArrayList<Corner> divide(Building buildingMap[], int low, int high){
         int mid = (low + high)/2;
-        //if(low > high){
-        //    return null;
-        //}
         if(high == low){
             ArrayList<Corner> equal = new ArrayList<>();
             equal.add(new Corner(buildingMap[low].l, buildingMap[low].h));
@@ -84,3 +81,5 @@ public class Skyline {
         return arr;
     }
 }
+
+
